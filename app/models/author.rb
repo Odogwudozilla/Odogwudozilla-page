@@ -4,5 +4,5 @@ class Author < ApplicationRecord
   devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable, :validatable
          
-  has_many_posts
+  has_many :posts
 end
