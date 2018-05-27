@@ -2,6 +2,10 @@ module Blog
   class PostsController < BlogController
     # GET /posts
     # GET /posts.json
+    def sign_in
+      
+    end
+    
     def index
       @posts = storage.list_for(params[:page], params[:tag])
     end

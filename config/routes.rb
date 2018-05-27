@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   
   # /author/posts
   namespace :authors do
+    get 'new_author_session' => '/authors/sign_in'
+    
     resources :posts do 
       put 'publish' => 'posts#publish', on: :member
       put 'unpublish' => 'posts#unpublish', on: :member
