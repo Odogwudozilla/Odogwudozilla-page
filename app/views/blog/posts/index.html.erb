@@ -2,5 +2,11 @@
 <% provide(:blog_active, 'active') %>
 
 <div class="row">
-  <%= render @posts %>
+  <div>
+    <%= render @posts %>
+  </div>
+  
+</div>
+<div class="flickr_pagination">
+  <%= will_paginate @posts, :container => false%>
 </div>
