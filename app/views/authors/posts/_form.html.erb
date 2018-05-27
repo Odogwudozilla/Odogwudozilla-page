@@ -17,10 +17,10 @@
       <div class="card">
         <div class="card-block">
           <% if @post.new_record? %>
-            <h4 class="card-title">New post</h4>
+            <h4 class="card-title">New post: </h4>
           <% else %>
             <h4 class="card-title">
-              <b>Edit</b>
+              <b>Edit: </b>
               <span class="thin-text"><%= @post.title %></span>
             </h4>
           <% end %>
@@ -47,7 +47,12 @@
           <li class="list-group-item">
             <div class="field">
               <%= f.label 'Tags' %>
-              <!--# f.text_area :tag_list, class: 'form-control' #-->
+              <%= f.text_field :tag_list, class: 'form-control' %>
+            </div>
+             <div class="col-md-8">
+                <div class="field">
+                  <%= f.text_area :body %>
+                </div>
             </div>
           </li>
           <li class="list-group-item">
@@ -58,21 +63,14 @@
         </ul>
       </div>
 
-      <% if @post.persisted? %>
-        <%= link_to 'Show', @post %> |
-      <% end %>
-      <%= link_to 'Back', authors_posts_path %>
-
-    </div>
-    <div class="col-md-8">
-
-      <div class="field">
-          <%= f.text_area :body %>
-      </div>
     </div>
   </div>
 
-
-
-
 <% end %>
+
+<div class="card-block">
+  <% if @post.persisted? %>
+        <%= link_to 'Show', @post, class: 'btn btn-primary' %> |
+  <% end %>
+  <%= link_to 'Back', authors_posts_path, class: 'btn btn-primary' %>
+</div>

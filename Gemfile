@@ -37,11 +37,12 @@ gem 'bootstrap', '4.0.0.alpha3'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
-
+# Friendly_id It allows you to create pretty URL’s and work with human-friendly strings as if they were numeric ids for ActiveRecord models. 
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
-
+# Annotate Rails classes with schema and routes info
 gem 'annotate'
 gem 'will_paginate', '~> 3.1.0'
+# A tagging plugin for Rails applications that allows for custom tagging along dynamic contexts
 gem 'acts-as-taggable-on', '~> 4.0'
 
 group :development, :test do
