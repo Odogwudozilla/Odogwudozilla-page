@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   # /author/posts
   namespace :authors do
     get 'new_author_session' => '/authors/sign_in'
-    
+    get '/account' => 'accounts#edit', as: :account
+    put '/info' => 'accounts#update_info', as: :info
+    put '/change_password' => 'accounts#change_password', as: :change_password
     resources :posts do 
       put 'publish' => 'posts#publish', on: :member
       put 'unpublish' => 'posts#unpublish', on: :member
