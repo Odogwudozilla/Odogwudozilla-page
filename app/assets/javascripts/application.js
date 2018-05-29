@@ -19,10 +19,6 @@
 //= require_tree
 
 
-(document).ready(function(){
-  ('.dropdown-toggle').dropdown();
-});
-
 document.addEventListener("turbolinks:load", function() {
   tinymce.remove();
   tinymce.init({
