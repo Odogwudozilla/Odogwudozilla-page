@@ -5,13 +5,13 @@
     height: 400px;
     margin-bottom: 20px;
     background-color: white;
-    .card-topper {
+    .card-img-top {
       height: 200px;
       width: 100%;
       background-size: cover;
       background-position: center;
     }
-    .card-block {
+    .card-body {
       padding: 10px;
       .card-title {
         font-size: 1.3rem;
@@ -46,7 +46,7 @@
 
 .posts.edit, .posts.new {
   .card {
-    .card-block {
+    .card-body {
       background-color: $light-gray;
     }
     .card-title {
@@ -93,7 +93,7 @@
   }
 }
 
-@media screen and (min-width: 34em) {
+@media screen and (min-width: 36em) {
   .posts.index .card {
     height: 440px;
   }
@@ -105,6 +105,14 @@
     height: 420px;
   }
 }
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 62em) { 
+  .posts.index .card {
+    height: 420; 
+  }
+}
+
 
 /* Extra large. Above 75em (1200px) */
 @media screen and (min-width: 75em) {

@@ -10,13 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery3
+//= require popper
 //= require tether
-//= require rails-ujs
 //= require bootstrap
-//= require bootstrap-sprockets
-//= require turbolinks
-//= require_tree
+//=require turbolinks
+//= require_tree .
 
 
 document.addEventListener("turbolinks:load", function() {

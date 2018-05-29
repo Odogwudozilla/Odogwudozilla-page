@@ -2,9 +2,9 @@
   <!-- Basic info section -->
   <%= form_tag authors_info_path, method: :put do %>
     <%= fields_for :author do |f| %>
-      <div class="col-md-6">
+      <div class="col">
         <div class="card">
-          <div class="card-block">
+          <div class="card-body">
             <div class="card-title">
               Basic info
             </div>
@@ -42,9 +42,9 @@
   <!-- Change password section -->
   <%= form_tag authors_change_password_path, method: :put do %>
     <%= fields_for :author do |f| %>
-      <div class="col-md-6">
+      <div class="col">
         <div class="card">
-          <div class="card-block">
+          <div class="card-body">
             <div class="card-title">
               Change password
             </div>
