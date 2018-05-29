@@ -11,11 +11,17 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
-//= require jquery_ujs
+//= require tether
 //= require rails-ujs
+//= require bootstrap
+//= require bootstrap-sprockets
 //= require turbolinks
-//= require_tree .
+//= require_tree
+
+
+(document).ready(function(){
+  ('.dropdown-toggle').dropdown();
+});
 
 document.addEventListener("turbolinks:load", function() {
   tinymce.remove();
